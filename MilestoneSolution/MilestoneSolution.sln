@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36310.24 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MilestoneApp", "MilestoneApp\MilestoneApp.csproj", "{AF6A4E53-A37B-4075-B07C-63FD69C18BF0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MilestoneLibrary", "MilestoneLibrary\MilestoneLibrary.csproj", "{7EBF69F5-9E49-4EF9-8A6F-F4E71CFE8E21}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF6A4E53-A37B-4075-B07C-63FD69C18BF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF6A4E53-A37B-4075-B07C-63FD69C18BF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF6A4E53-A37B-4075-B07C-63FD69C18BF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF6A4E53-A37B-4075-B07C-63FD69C18BF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EBF69F5-9E49-4EF9-8A6F-F4E71CFE8E21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EBF69F5-9E49-4EF9-8A6F-F4E71CFE8E21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EBF69F5-9E49-4EF9-8A6F-F4E71CFE8E21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EBF69F5-9E49-4EF9-8A6F-F4E71CFE8E21}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6DFD40EC-3505-4E5B-9A38-88C3CAD77D37}
+	EndGlobalSection
+EndGlobal
