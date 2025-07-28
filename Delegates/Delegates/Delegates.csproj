@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Delegates.MultiCastDelegate5</StartupObject>
+    <StartupObject>Delegates.FunctionDelegate10</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -46,9 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActionDelegates8.cs" />
+    <Compile Include="ActionDelegates9.cs" />
+    <Compile Include="DelegateAnonymous7.cs" />
+    <Compile Include="DelegateArray6.cs" />
     <Compile Include="DelegateExample2.cs" />
     <Compile Include="DelegatesExample1.cs" />
     <Compile Include="DelegatesExample3.cs" />
+    <Compile Include="FunctionDelegate10.cs" />
     <Compile Include="MultiCastDelegate5.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

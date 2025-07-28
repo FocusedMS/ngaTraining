@@ -12,7 +12,7 @@ namespace Delegates
 
         public static void Project()
         {
-            Console.WriteLine("Camstone Project to be done Last...");
+            Console.WriteLine("Capstone Project to be done Last...");
         }
 
         public static void Milestone1()
