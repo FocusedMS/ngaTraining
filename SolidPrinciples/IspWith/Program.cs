@@ -10,6 +10,12 @@ namespace IspWith
     {
         static void Main(string[] args)
         {
+            Murali murali = new Murali();
+            murali.ShowPersonalInfo();
+            Rajesh rajesh = new Rajesh();
+            rajesh.ShowPersonalInfo();
+            rajesh.ProjectName();
+            rajesh.BillingInfo();
         }
     }
 }

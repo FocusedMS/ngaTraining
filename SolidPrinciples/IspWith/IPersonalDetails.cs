@@ -8,5 +8,6 @@ namespace IspWith
 {
     internal interface IPersonalDetails
     {
+        void ShowPersonalInfo();
     }
 }

@@ -4,9 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WithDip
+namespace DipWith
 {
-    internal interface ITrainingData
+    internal interface ITrainerData
     {
+        void Name();
+        void City();
+        void Email();
+
     }
 }

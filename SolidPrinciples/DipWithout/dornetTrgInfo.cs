@@ -6,7 +6,19 @@ using System.Threading.Tasks;
 
 namespace DipWithout
 {
-    internal class dornetTrgInfo
+    internal class DotnetTrgInfo
     {
+        private DotnetTrg dotnetTrg;
+
+        public DotnetTrgInfo(DotnetTrg dotnetTrg)
+        {
+            this.dotnetTrg = dotnetTrg;
+        }
+
+        public void Details()
+        {
+            dotnetTrg.TrainerName();
+            dotnetTrg.City();
+        }
     }
 }

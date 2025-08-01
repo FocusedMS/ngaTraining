@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace IspWithout
 {
-    internal class IEmployDetails
+    internal interface IEmployDetails
     {
+        void PersonalDetails();
+        void ProjectDetails();
+        void AccountDetails();
     }
 }

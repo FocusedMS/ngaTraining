@@ -8,5 +8,9 @@ namespace LspWithout
 {
     internal class First
     {
+        public void Show()
+        {
+            Console.WriteLine("Show Method from Class First...");
+        }
     }
 }

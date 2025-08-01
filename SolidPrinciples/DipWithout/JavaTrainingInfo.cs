@@ -8,5 +8,17 @@ namespace DipWithout
 {
     internal class JavaTrainingInfo
     {
+        private JavaTrg javaTrg;
+
+        public JavaTrainingInfo(JavaTrg javaTrg)
+        {
+            this.javaTrg = javaTrg;
+        }
+
+        public void Details()
+        {
+            javaTrg.TrainerName();
+            javaTrg.City();
+        }
     }
 }

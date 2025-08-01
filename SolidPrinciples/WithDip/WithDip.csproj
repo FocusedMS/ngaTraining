@@ -43,8 +43,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DotnetInfo.cs" />
+    <Compile Include="Interface1.cs" />
+    <Compile Include="ITrainingData.cs" />
+    <Compile Include="JavaInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TrainerUtil.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

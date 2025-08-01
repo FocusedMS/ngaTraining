@@ -43,6 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Details.cs" />
+    <Compile Include="Ganesh.cs" />
+    <Compile Include="Kusuma.cs" />
+    <Compile Include="Mounika.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

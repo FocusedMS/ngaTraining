@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace LspWithout
 {
-    internal class Second
+    internal class Second : First
     {
+        public new void Show()
+        {
+            Console.WriteLine("Show Method from Class Second...");
+        }
     }
 }

@@ -10,6 +10,11 @@ namespace DipWithout
     {
         static void Main(string[] args)
         {
+            JavaTrainingInfo javaTrainingInfo = new JavaTrainingInfo(new JavaTrg());
+            DotnetTrgInfo dotnetTrainingInfo = new DotnetTrgInfo(new DotnetTrg());
+
+            javaTrainingInfo.Details();
+            dotnetTrainingInfo.Details();
         }
     }
 }

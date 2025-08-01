@@ -8,5 +8,14 @@ namespace DipWithout
 {
     internal class DotnetTrg
     {
+        public void TrainerName()
+        {
+            Console.WriteLine("Trainer Name is Chandra Sekhar...");
+        }
+
+        public void City()
+        {
+            Console.WriteLine("Location is from NewYork...");
+        }
     }
 }

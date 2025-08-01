@@ -43,6 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="dornetTrgInfo.cs" />
+    <Compile Include="DotnetTrg.cs" />
+    <Compile Include="JavaTrainingInfo.cs" />
+    <Compile Include="JavaTrg.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

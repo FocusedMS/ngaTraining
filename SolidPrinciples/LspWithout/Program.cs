@@ -10,6 +10,8 @@ namespace LspWithout
     {
         static void Main(string[] args)
         {
+            First obj = new Second();
+            obj.Show();
         }
     }
 }

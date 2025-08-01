@@ -4,9 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace withLsp
+namespace LspWIth
 {
-    internal class Mounika
+    internal class Mounika : Details
     {
+        public override void ShowInfo()
+        {
+            Console.WriteLine("Hi I am Mounika...");
+        }
     }
 }
