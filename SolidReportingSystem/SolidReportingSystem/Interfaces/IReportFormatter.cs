@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace SolidReportingSystem.Interfaces
 {
-    internal interface IReportFormatter
+    public interface IReportFormatter
     {
+        string Format(string content);
     }
 }

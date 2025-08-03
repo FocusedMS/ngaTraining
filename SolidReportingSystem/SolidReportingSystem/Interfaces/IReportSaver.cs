@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace SolidReportingSystem.Interfaces
 {
-    internal interface IReportSaver
+    public interface IReportSaver
     {
+        void Save(string formattedReport);
     }
 }
+

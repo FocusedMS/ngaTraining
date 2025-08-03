@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace SolidReportingSystem.Interfaces
 {
-    internal interface IReportGenerator
+    public interface IReportGenerator
     {
+        string GenerateReport();
     }
 }
