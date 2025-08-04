@@ -1,16 +1,25 @@
+using NUnit.Framework;
+using SolidReportingSystem;
+using SolidReportingSystem.Services;
+using SolidReportingSystem.Interfaces;
+using System.IO;
+
 namespace SolidReportingSystem.Tests
 {
-    public class Tests
+    public class ReportServiceTests
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
-
         [Test]
-        public void Test1()
+        public void GenerateAndSaveReport_ShouldCreateFormattedFile()
         {
-            Assert.Pass();
+            IReportGenerator generator = new ReportGenerator();
+            IReportFormatter formatter = new PdfFormatter();
+            IReportSaver saver = new FileReportSaver();
+            var service = new ReportService(generator, formatter, saver);
+
+            service.GenerateAndSaveReport();
+
+            string output = File.ReadAllText("ReportOutput.txt");
+            Assert.That(output, Does.Contain("PDF FORMAT"));
         }
     }
 }
