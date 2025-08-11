@@ -1,0 +1,12 @@
+# Ignore Visual Studio-specific folders
+.vs/
+bin/
+obj/
+*.user
+*.suo
+*.log
+*.exe
+*.dll
+*.pdb
+packages/
+*.nupkg
