@@ -8,8 +8,8 @@ const Four = () => {
     setName("Hi I am Ajay");
   }
 
-  const pralavi = () => {
-    setName("Hi I am Pralavi...");
+  const pravali = () => {
+    setName("Hi I am Pravali...");
   }
 
   const uday = () => {
@@ -20,7 +20,7 @@ const Four = () => {
     <div>
       <input type="button" value="Ajay" onClick={ajay} />
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <input type="button" value="Pralavi" onClick={pralavi} /> 
+      <input type="button" value="Pravali" onClick={pravali} /> 
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <input type="button" value="Uday" onClick={uday} />
       <hr/>
