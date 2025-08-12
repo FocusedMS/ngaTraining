@@ -1,0 +1,52 @@
+.App {
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.App h1 {
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.App h2 {
+  color: #666;
+  margin-bottom: 15px;
+}
+
+input[type="button"] {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  margin: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="button"]:hover {
+  background-color: #0056b3;
+}
+
+input[type="text"], input[type="number"] {
+  padding: 8px;
+  margin: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 200px;
+}
+
+label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+form {
+  margin: 20px 0;
+}
+
+hr {
+  margin: 20px 0;
+  border: none;
+  border-top: 1px solid #ddd;
+}
