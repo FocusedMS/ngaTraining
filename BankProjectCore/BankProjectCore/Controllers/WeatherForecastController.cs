@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace RestEmployCrod.Controllers
+namespace BankProjectCore.Controllers
 {
     [ApiController]
     [Route("[controller]")]

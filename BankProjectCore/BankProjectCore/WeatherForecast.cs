@@ -1,4 +1,4 @@
-namespace RestEmployCrod
+namespace BankProjectCore
 {
     public class WeatherForecast
     {
