@@ -1,9 +1,0 @@
-export { default as First } from './first/first';
-export { default as Second } from './Second/Second';
-export { default as Third } from './Third/Third';
-export { default as Four } from './Four/Four';
-export { default as Five } from './Five/Five';
-export { default as Six } from './Six/Six';
-export { default as Seven } from './Seven/Seven';
-export { default as Eight } from './Eight/Eight';
-export { default as ButtonEx } from './ButtonEx/ButtonEx';
