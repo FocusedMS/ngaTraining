@@ -1,0 +1,11 @@
+.component-font-theme {
+    padding: 20px;
+    margin: 10px;
+    border: 2px solid #6f42c1;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    color: #6f42c1;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
