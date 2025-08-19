@@ -1,0 +1,14 @@
+1. Find all smartphones:
+{ "category": "Smartphones" }
+
+2. Find orders by a specific user:
+{ "userId": { "$oid": "689341308e5c54c73851ce4e" } }
+
+3. Find orders containing 'Dell XPS 15':
+{ "products.name": "Dell XPS 15" }
+
+4. Find users with email ending in '@example.com':
+{ "email": /@example\.com$/ }
+
+5. Find Users Registered After August 1st, 2025
+{ "createdAt": { "$gte": { "$date": "2025-08-01T00:00:00Z" } } }

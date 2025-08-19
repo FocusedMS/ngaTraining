@@ -1,0 +1,14 @@
+[{
+  "_id": {
+    "$oid": "6893461a8e5c54c73851ce63"
+  },
+  "username": "john_doe",
+  "email": "john@example.com",
+  "hashedPassword": "$2b$10$exampleHashForDemoOnly",
+  "createdAt": {
+    "$date": "2025-08-01T08:00:00.000Z"
+  },
+  "lastLogin": {
+    "$date": "2025-08-05T07:40:00.000Z"
+  }
+}]
