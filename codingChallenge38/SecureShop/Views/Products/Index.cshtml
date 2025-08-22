@@ -1,0 +1,24 @@
+@model IEnumerable<SecureShop.Models.Product>
+@{
+    ViewData["Title"] = "Products";
+}
+
+<h2>Products</h2>
+
+<div class="row">
+@foreach (var p in Model)
+{
+    <div class="col-md-4">
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">@Html.DisplayFor(_ => p.Name)</h5>
+                <p class="card-text">@Html.DisplayFor(_ => p.Description)</p>
+                <p class="card-text"><strong>@p.Price.ToString("C")</strong></p>
+                <a class="btn btn-primary" asp-controller="Products" asp-action="Details" asp-route-id="@p.Id">Details</a>
+            </div>
+        </div>
+    </div>
+}
+</div>
+
+

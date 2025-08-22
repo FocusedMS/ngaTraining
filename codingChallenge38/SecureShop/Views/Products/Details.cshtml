@@ -1,0 +1,27 @@
+@model SecureShop.Models.Product
+@{
+    ViewData["Title"] = "Product Details";
+}
+
+<h2>@Html.DisplayFor(m => m.Name)</h2>
+<p>@Html.DisplayFor(m => m.Description)</p>
+<p><strong>@Model.Price.ToString("C")</strong></p>
+
+@if (User.IsInRole("Customer"))
+{
+    <form asp-controller="Orders" asp-action="Create" method="post">
+        <input type="hidden" name="productId" value="@Model.Id" />
+        <div class="mb-3">
+            <label class="form-label" for="quantity">Quantity</label>
+            <input class="form-control" type="number" name="quantity" id="quantity" min="1" max="1000" value="1" />
+        </div>
+        <button type="submit" class="btn btn-success">Buy</button>
+        @Html.AntiForgeryToken()
+    </form>
+}
+else
+{
+    <p><a asp-area="Identity" asp-page="/Account/Login">Login</a> as Customer to order.</p>
+}
+
+
