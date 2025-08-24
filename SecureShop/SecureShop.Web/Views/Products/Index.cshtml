@@ -1,0 +1,36 @@
+﻿@model IEnumerable<SecureShop.Web.Models.Product>
+
+@{
+    ViewData["Title"] = "Products";
+}
+
+<h2>Products</h2>
+
+@if (!Model.Any())
+{
+    <p>No products yet. (Add rows via DB for now.)</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th class="text-end">Price</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var p in Model)
+            {
+                <tr>
+                    <td>@p.Name</td>          @* HTML-encoded automatically *@
+                    <td>@p.Description</td>   @* HTML-encoded automatically *@
+                    <td class="text-end">@p.Price</td>
+                    <td><a asp-action="Details" asp-route-id="@p.Id">View</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

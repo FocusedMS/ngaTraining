@@ -1,5 +1,0 @@
-export const FluxActionTypes = {
-	ADD_TASK: 'FLUX_ADD_TASK',
-	REMOVE_TASK: 'FLUX_REMOVE_TASK',
-	TOGGLE_TASK: 'FLUX_TOGGLE_TASK'
-}; 

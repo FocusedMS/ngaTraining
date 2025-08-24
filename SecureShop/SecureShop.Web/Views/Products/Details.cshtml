@@ -1,0 +1,55 @@
+﻿@model ProductDetailsViewModel
+
+@{
+    ViewData["Title"] = "Product Details";
+}
+
+<h2>@Model.Product.Name</h2>
+<p>@Model.Product.Description</p>
+<p><strong>Price:</strong> @Model.Product.Price</p>
+
+<hr />
+<h4>Leave a Review</h4>
+
+<form asp-action="AddReview" method="post">
+    @Html.AntiForgeryToken()
+    <input asp-for="Review.ProductId" type="hidden" />
+
+    <div class="mb-2">
+        <label class="form-label" asp-for="Review.ReviewerName"></label>
+        <input class="form-control" asp-for="Review.ReviewerName" />
+        <span class="text-danger" asp-validation-for="Review.ReviewerName"></span>
+    </div>
+
+    <div class="mb-2">
+        <label class="form-label" asp-for="Review.Comment"></label>
+        <textarea class="form-control" asp-for="Review.Comment" rows="3"></textarea>
+        <span class="text-danger" asp-validation-for="Review.Comment"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Post</button>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+
+<hr />
+<h4>Reviews</h4>
+@if (Model.Reviews == null || !Model.Reviews.Any())
+{
+    <p>No reviews yet.</p>
+}
+else
+{
+    <ul class="list-group">
+        @foreach (var r in Model.Reviews)
+        {
+            <li class="list-group-item">
+                <strong>@r.ReviewerName</strong>
+                <span class="text-muted">(@r.CreatedAtUtc.ToLocalTime())</span>
+                <div>@r.Comment</div> @* HTML-encoded → prevents XSS *@
+            </li>
+        }
+    </ul>
+}
