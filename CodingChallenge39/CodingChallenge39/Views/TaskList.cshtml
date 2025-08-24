@@ -1,0 +1,30 @@
+﻿@model IEnumerable<YourProjectNamespace.Models.TaskItem>
+@{
+    ViewData["Title"] = "Your Tasks";
+}
+<h2>Your Tasks</h2>
+
+<p>
+    <a asp-controller="Tasks" asp-action="Create" class="btn btn-sm btn-primary">Create Task</a>
+</p>
+
+@if (!Model.Any())
+{
+    <p>No tasks yet.</p>
+}
+else
+{
+    <ul class="list-group">
+        @foreach (var t in Model)
+        {
+            <li class="list-group-item">
+                <strong>@t.Title</strong>
+                <div class="text-muted">@t.CreatedAtUtc.ToLocalTime()</div>
+                <div>@t.Description</div> @* HTML-encoded => XSS-safe *@
+                <div class="mt-1">
+                    <a asp-controller="Tasks" asp-action="Edit" asp-route-id="@t.Id">Edit</a>
+                </div>
+            </li>
+        }
+    </ul>
+}
