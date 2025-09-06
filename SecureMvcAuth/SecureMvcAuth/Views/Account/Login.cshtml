@@ -1,0 +1,33 @@
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="card">
+    <h2>Login</h2>
+    
+    <form asp-controller="Account" asp-action="Login" method="post">
+        @Html.AntiForgeryToken()
+        
+        <div style="margin-bottom: 12px;">
+            <label>Username</label><br />
+            <input class="input" type="text" name="username" required />
+        </div>
+        
+        <div style="margin-bottom: 12px;">
+            <label>Password</label><br />
+            <input class="input" type="password" name="password" required />
+        </div>
+        
+        <button class="btn" type="submit">Sign In</button>
+    </form>
+    
+    @if (!ViewData.ModelState.IsValid)
+    {
+        <div style="color: #b00020; margin-top: 12px;">
+            @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+            {
+                <div>@error.ErrorMessage</div>
+            }
+        </div>
+    }
+</div>

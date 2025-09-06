@@ -1,0 +1,28 @@
+@model IEnumerable<SecureMvcAuth.Models.ApplicationUser>
+@{
+    ViewData["Title"] = "Admin Dashboard";
+}
+
+<div class="card">
+    <h2>Welcome, Admin! You have access to the Admin Dashboard.</h2>
+    
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Email</th>
+                <th>User ID</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in Model)
+            {
+                <tr>
+                    <td>@user.UserName</td>
+                    <td>@user.Email</td>
+                    <td>@user.Id</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,11 @@
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;margin:0;background:#f6f8fb;color:#0d1b2a}
+.topbar{background:#0D47A1;color:#fff;display:flex;justify-content:space-between;align-items:center;padding:12px 20px}
+.topbar a,.topbar .linklike{color:#E3F2FD;margin-left:16px;text-decoration:none;background:none;border:none;cursor:pointer;font-weight:600}
+.container{max-width:960px;margin:32px auto;padding:0 16px}
+.card{background:#fff;border-radius:12px;box-shadow:0 4px 16px rgba(13,71,161,.1);padding:24px;margin-bottom:24px}
+.btn{background:#1E88E5;color:#fff;border:none;padding:10px 16px;border-radius:8px;cursor:pointer}
+.btn:hover{background:#1565C0}
+.input{width:100%;padding:10px;border:1px solid #d0d7de;border-radius:8px}
+.table{width:100%;border-collapse:collapse}
+.table th,.table td{border-bottom:1px solid #e5e7eb;padding:10px;text-align:left}
+.badge{display:inline-block;padding:4px 8px;background:#E3F2FD;color:#0D47A1;border-radius:999px;font-weight:700}

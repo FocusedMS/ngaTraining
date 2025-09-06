@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"] - RoleBasedProductManagement</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+    <header>
+        @* Auth links *@
+        @if (User?.Identity?.IsAuthenticated ?? false)
+        {
+            <span>Hello @User.Identity!.Name</span>
+            <a asp-controller="Account" asp-action="Logout">Logout</a>
+        }
+        else
+        {
+            <a asp-controller="Account" asp-action="Login">Login</a>
+            <span>|</span>
+            <a asp-controller="Account" asp-action="Register">Register</a>
+        }
+
+        <hr />
+
+        @* TempData messages *@
+        @if (TempData["Success"] is string s)
+        {
+            <div class="alert-success">@s</div>
+        }
+        @if (TempData["Error"] is string e)
+        {
+            <div class="alert-danger">@e</div>
+        }
+    </header>
+
+    <main role="main">
+        @RenderBody()
+    </main>
+
+    @* client-side validation (created by the MVC template) *@
+    <partial name="_ValidationScriptsPartial" />
+</body>
+</html>

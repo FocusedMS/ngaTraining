@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Matching Test</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      max-width: 500px;
+      margin: auto;
+    }
+    button, input[type="text"] {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+    }
+    #extraContent {
+      display: none;
+      margin-top: 10px;
+    }
+    #result {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="generateBtn">Generate</button>
+
+  <div id="extraContent">
+    <p id="infoText">
+      Success is not final
+    </p>
+    <input 
+      type="text" 
+      id="inputBox" 
+      placeholder="Enter the paragraph..."
+      oncopy="return false" 
+      oncut="return false" 
+      onpaste="return false"
+    >
+    <button id="testBtn">Test</button>
+    <p id="result"></p>
+  </div>
+
+  <script>
+    const generateBtn = document.getElementById('generateBtn');
+    const extraContent = document.getElementById('extraContent');
+    const inputBox = document.getElementById('inputBox');
+    const testBtn = document.getElementById('testBtn');
+    const infoText = document.getElementById('infoText').innerText.trim();
+    const result = document.getElementById('result');
+
+    let timerStarted = false;
+
+    generateBtn.addEventListener('click', function () {
+      extraContent.style.display = 'block';
+      inputBox.value = '';
+      result.textContent = '';
+      if (!timerStarted) {
+        timerStarted = true;
+        setTimeout(() => {
+          const userInput = inputBox.value.trim();
+          if (userInput === infoText) {
+            result.textContent = 'Success!';
+            result.style.color = 'green';
+          } else {
+            result.textContent = 'Not matched.';
+            result.style.color = 'red';
+          }
+          timerStarted = false;
+        }, 15000); // 15 seconds
+      }
+    });
+
+    testBtn.addEventListener('click', function () {
+      const userInput = inputBox.value.trim();
+      if (userInput === infoText) {
+        result.textContent = 'Success!';
+        result.style.color = 'green';
+      } else {
+        result.textContent = 'Not matched.';
+        result.style.color = 'red';
+      }
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+﻿@model RoleBasedProductManagement.Models.Product
+<h2>Edit</h2>
+<form asp-action="Edit" method="post">
+    @Html.AntiForgeryToken()
+    <input type="hidden" asp-for="Id" />
+    <div><label asp-for="Name"></label><input asp-for="Name" /><span asp-validation-for="Name" class="text-danger"></span></div>
+    <div><label asp-for="Description"></label><textarea asp-for="Description"></textarea></div>
+    <div><label asp-for="Price"></label><input asp-for="Price" /><span asp-validation-for="Price" class="text-danger"></span></div>
+    <button>Save</button>
+</form>
+<p><a asp-action="Index">Back</a></p>

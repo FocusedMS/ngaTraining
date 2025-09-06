@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ResumeApi</name>
+    </assembly>
+    <members>
+        <member name="T:ResumeApi.Controllers.AdminController">
+            <summary>
+            Admin endpoints for user and system monitoring.
+            </summary>
+        </member>
+        <member name="M:ResumeApi.Controllers.AdminController.Users">
+            <summary>List users (id, email, full name).</summary>
+        </member>
+        <member name="M:ResumeApi.Controllers.AdminController.Metrics">
+            <summary>Simple activity metrics (totals, last 24h and 7d resumes).</summary>
+        </member>
+        <member name="T:ResumeApi.Controllers.AuthController">
+            <summary>
+            Authentication endpoints for registering and logging in.
+            </summary>
+        </member>
+        <member name="M:ResumeApi.Controllers.AuthController.Register(ResumeApi.Controllers.AuthController.RegisterDto)">
+            <summary>Register a new user account.</summary>
+        </member>
+        <member name="M:ResumeApi.Controllers.AuthController.Login(ResumeApi.Controllers.AuthController.LoginDto)">
+            <summary>Login with email and password to receive a JWT.</summary>
+        </member>
+        <member name="T:ResumeApi.Controllers.ResumesController">
+            <summary>
+            Manage resumes: create, update, list, download PDF, and get AI suggestions.
+            </summary>
+        </member>
+        <member name="M:ResumeApi.Controllers.ResumesController.List(System.Boolean)">
+            <summary>List resumes for the current user; Admin can pass all=1 to list all.</summary>
+        </member>
+        <member name="M:ResumeApi.Controllers.ResumesController.GetById(System.Int32)">
+            <summary>Get a resume by id (owner or Admin only).</summary>
+        </member>
+        <member name="M:ResumeApi.Controllers.ResumesController.Create(ResumeApi.Controllers.ResumesController.ResumeDto)">
+            <summary>Create a new resume for the current user.</summary>
+        </member>
+        <member name="M:ResumeApi.Controllers.ResumesController.Update(System.Int32,ResumeApi.Controllers.ResumesController.ResumeDto)">
+            <summary>Update a resume (owner or Admin only).</summary>
+        </member>
+        <member name="M:ResumeApi.Controllers.ResumesController.Delete(System.Int32)">
+            <summary>Delete a resume (owner or Admin only).</summary>
+        </member>
+        <member name="M:ResumeApi.Controllers.ResumesController.Download(System.Int32,System.String)">
+            <summary>Download a resume as a formatted PDF (owner or Admin only).</summary>
+        </member>
+        <member name="M:ResumeApi.Controllers.ResumesController.AiSuggestions(System.Int32)">
+            <summary>Generate and persist AI suggestions for the resume.</summary>
+        </member>
+        <member name="M:ResumeApi.Controllers.ResumesController.AiSuggestionsPreview(System.Int32)">
+            <summary>Preview AI suggestions without saving them.</summary>
+        </member>
+        <member name="T:ResumeApi.Migrations.Init">
+            <inheritdoc />
+        </member>
+        <member name="M:ResumeApi.Migrations.Init.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ResumeApi.Migrations.Init.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ResumeApi.Migrations.Init.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

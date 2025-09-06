@@ -1,6 +1,18 @@
-﻿namespace JWT.Models
+﻿using JwtDemo.Models;
+using Microsoft.EntityFrameworkCore;
+
+namespace JWT.Models;
+
+public class AppDbContext : DbContext
 {
-    public class AppDbContext
+    public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
+    public DbSet<User> Users => Set<User>();
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.Entity<User>()
+            .HasIndex(u => u.Username)
+            .IsUnique();
     }
 }
+

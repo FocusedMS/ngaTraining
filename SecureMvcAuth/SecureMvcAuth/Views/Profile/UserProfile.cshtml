@@ -1,0 +1,11 @@
+@model SecureMvcAuth.Models.ApplicationUser
+@{
+    ViewData["Title"] = "User Profile";
+}
+
+<div class="card">
+    <h2>Welcome, User! Here is your profile information.</h2>
+    
+    <p><strong>Username:</strong> @Model?.UserName</p>
+    <p><strong>Email:</strong> @Model?.Email</p>
+</div>

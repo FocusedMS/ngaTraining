@@ -1,0 +1,34 @@
+﻿@model IEnumerable<RoleBasedProductManagement.Models.Product>
+@{
+    ViewData["Title"] = "Products";
+}
+<h2>Products</h2>
+
+@if (User.IsInRole("Admin"))
+{
+    <p><a asp-action="Create">Create Product</a></p>
+}
+
+<table>
+    <thead><tr><th>Name</th><th>Price</th><th></th></tr></thead>
+    <tbody>
+        @foreach (var p in Model)
+        {
+            <tr>
+                <td>@p.Name</td>
+                <td>@p.Price</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@p.Id">View</a>
+                    @if (User.IsInRole("Admin") || User.IsInRole("Manager"))
+                    {
+                        <text> | <a asp-action="Edit" asp-route-id="@p.Id">Edit</a></text>
+                    }
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <text> | <a asp-action="Delete" asp-route-id="@p.Id">Delete</a></text>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
